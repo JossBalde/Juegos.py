@@ -10,7 +10,6 @@ Exercises
 """
 
 from turtle import *
-
 from freegames import vector
 
 
@@ -43,13 +42,34 @@ def circle(start, end):
 
 def rectangle(start, end):
     """Draw rectangle from start to end."""
-    pass  # TODO
+    # Aquí se completó la función rectangle
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(2):
+        forward(end.x - start.x)
+        left(90)
+        forward(end.y - start.y)
+        left(90)
+
+    end_fill()
 
 
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+    # Aquí se completó la función triangle
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+
+    end_fill()
 
 def tap(x, y):
     """Store starting point or draw shape."""
